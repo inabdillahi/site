@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Page{% endblock %}
+
+{% block body %}
+<h1>Page de page</h1>
+<br>
+{% for image in images %}
+<img src="{{ asset('assets/images/' ~ image.image) }}" width="200px" alt="" srcset="">
+{% endfor %}
+<br>
+{{form_start(form)}}
+{{form_widget(form)}}
+<input type="submit" class="btn btn-danger">
+{{form_end(form)}}
+{% endblock %}
